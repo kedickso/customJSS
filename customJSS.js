@@ -12,7 +12,7 @@
 
 var jssURL = window.location.protocol + "//" + window.location.host + "";
 var customFileDirectory='https://opragel.github.io/customJSS/custom/';
-var customLogoURL=customFileDirectory + 'osimp.png';
+var customLogoURL = 'https://jss.volusion.com:8443/images/login/osx-jss-login.png';
 var customCSSURL=customFileDirectory + 'customJSS.css';
 
 // Link to default JSS font (default Roboto)
@@ -31,6 +31,9 @@ var createMenuItemID = function( url, displayName, id ) {
 $('head').append(font + customCSS);
 
 $('#settings').attr('class','');
+
+// Changes font on policy and computer pages
+$('#form-wrapper').css('font', '13px/1.3 Roboto');
 
 // Change header/logo style
 $('#logo-dash .hidemobile').attr('src', customLogoURL);
